@@ -1,0 +1,90 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": [
+    "redux-saga",
+    "react",
+    "jsx-a11y"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-restricted-syntax": "off",
+    "function-paren-newline": "off",
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "no-underscore-dangle": [
+      "error", { "allowAfterThis": false, "allow": [
+        "__", "__data", "__html"
+      ] }],
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "react/prefer-stateless-function": "off",
+    "react/jsx-handler-names": ["error", { "eventHandlerPrefix": "handle", "eventHandlerPropPrefix": "on" }],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": 0,
+    "no-console": "error",
+    "no-confusing-arrow": "off",
+    "react/forbid-prop-types": 0,
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/require-default-props": 0,
+    "react/self-closing-comp": 0,
+    "redux-saga/no-yield-in-race": 2,
+    "redux-saga/yield-effects": 2,
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/imports-first": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/sort-comp":
+    [
+      "error",
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "/^handle.+$/",
+          "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+          "everything-else",
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.common.js"
+      }
+    }
+  }
+}

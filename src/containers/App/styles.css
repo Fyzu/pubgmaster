@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: burbank-big, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -2px;
+  margin-right: -2px;
+}

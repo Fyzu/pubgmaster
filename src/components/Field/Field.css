@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 28px;
+  background-color: rgb(4, 12, 22);
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.value {
+  color: rgb(251, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  margin-left: 10px;
+}
