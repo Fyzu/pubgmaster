@@ -1,0 +1,13 @@
+{
+  "name": "@pubgmaster/server",
+  "version": "1.0.0",
+  "description": "PUBG Master stats server",
+  "main": "./src/index",
+  "author": "Dmitry Petrov",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3",
+    "moment": "^2.22.2"
+  }
+}

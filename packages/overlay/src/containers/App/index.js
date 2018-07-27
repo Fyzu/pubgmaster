@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader'
 import queryString from 'query-string'
 import api from 'utils/api'
 import Field from 'components/Field/Field'
+import moment from 'moment'
 
 import styles from './styles.css'
 
@@ -13,12 +14,12 @@ class App extends PureComponent {
     super(props, ...args)
 
     const { playerName, shard } = queryString.parse(window.location.search)
-    const afterAt = new Date()
+    const afterAt = moment().utc().toISOString()
 
     this.state = {
       playerName,
       shard,
-      afterAt: afterAt.toISOString(),
+      afterAt,
       stats: {
         count: 0,
         kills: 0,

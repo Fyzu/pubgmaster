@@ -1,8 +1,16 @@
 /* eslint-disable global-require */
 const path = require('path')
+
+const rootPath = path.resolve(__dirname, '../../')
+require('dotenv-safe').config({
+  path: path.resolve(rootPath, './.env'),
+  example: path.resolve(rootPath, './.env.example'),
+})
+
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const devMode = process.env.NODE_ENV !== 'production'
@@ -22,10 +30,11 @@ module.exports = {
     ],
   },
   output: {
-    publicPath: '/',
+    publicPath: '/overlay/',
+    path: path.resolve(rootPath, './build/overlay'),
   },
   resolve: {
-    modules: [path.resolve('src'), path.resolve('node_modules')],
+    modules: [path.resolve('src'), path.resolve('node_modules'), path.resolve(rootPath, 'node_modules')],
     extensions: ['.js', '.jsx', '.json'],
   },
   module: {
